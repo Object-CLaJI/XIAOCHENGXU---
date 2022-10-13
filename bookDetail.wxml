@@ -1,0 +1,107 @@
+<!--pages/bookDetail/bookDetail.wxml-->
+<view class="p_30 b_b" style="padding-bottom: 200rpx;">
+  <view class="split_7_3">
+    <view class="v_t" style="vertical-align: top;">
+      <view class="f_w ft_36">{{bookDetail.name}}</view>
+
+
+      <!-- <view class="w_s_n" style="overflow-x: hidden">
+        <view class="d_in v_m  ft_28 c_000">
+          <view class="c_000">本书作者: </view>
+          <view class="c_000">出版日期: </view>
+          <view class="c_000">出版社: </view>
+          <view class="c_000">ISBN: </view>
+          <view class="c_000">本书评分: </view>
+
+        </view>
+        <view class="d_in v_m  ft_28 c_666 nowarp b_b" style="padding-left: 10rpx">
+          <view class="nowarp">{{bookDetail.author}}</view>
+          <view class="nowarp">{{bookDetail.publishDate}}</view>
+          <view class="nowarp">{{bookDetail.press}}</view>
+          <view class="nowarp">{{bookDetail.isbn}}</view>
+          <view class="nowarp">{{bookDetail.score}}分</view>
+        </view>
+      </view> -->
+
+
+
+
+      <view class="split_35_65 ft_28 c_999 ft_24" style="line-height: 1">
+        <view class="c_000">本书作者: </view>
+        <view class="nowarp">{{bookDetail.author}}</view>
+      </view>
+      <view class="split_35_65 ft_28 c_666" style="line-height: 1">
+        <view class="c_000">出版日期: </view>
+        <view class="nowarp">{{bookDetail.publishDate}}</view>
+      </view>
+      <view class="split_35_65 ft_28 c_666" style="line-height: 1">
+        <view class="c_000">出版社: </view>
+        <view class="nowarp">{{bookDetail.press}}</view>
+      </view>
+      <view class="split_35_65 ft_28 c_666" style="line-height: 1">
+        <view class="c_000">ISBN: </view>
+        <view class="nowarp">{{bookDetail.isbn}}</view>
+      </view>
+      <view class="split_35_65 ft_28 c_666" style="line-height: 1">
+        <view class="c_000">本书评分: </view>
+        <view class="nowarp">{{bookDetail.score}}分</view>
+      </view>
+    </view>
+    <view style="text-align: left">
+      <image src="{{bookDetail.coverImgUrl}}" mode="widthFix" style="width: 90%"></image>
+    </view>
+  </view>
+  <!-- 简介 -->
+  <view class="m_t_40">
+    <view class="f_w ft_36">简介</view>
+    <view class="p_r m_t_30" style="padding-bottom: 30rpx;">
+      <view class="ft_26 lh_14 c_333 {{isShowMore ? '' : 'limitH'}}" style="text-indent: 60rpx;line-height: 1.2">
+        {{bookDetail.description}}
+      </view>
+      <view class="p_a t_c ft_28 p_t_40"
+        style="bottom: 0; width: 100%; background-image: linear-gradient(to bottom, rgba(200, 200, 200, .1) , rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1));bottom: {{isShowMore ? '-26rpx' : '0'}}"
+        bindtap="isShowMore">{{!isShowMore ? '点击查看更多' : '收起'}}</view>
+    </view>
+  </view>
+
+  <!-- 精选书评 -->
+  <view class="m_t_40">
+    <view class="split_2">
+      <view class="f_w ft_36">精选书评</view>
+      <view class="t_r">
+        <image src="../../images/icon/icon_dian.png" mode="widthFix" style="width:40rpx" bindtap="toEvaluate"></image>
+      </view>
+    </view>
+    <view class="m_t_30 p_10 b_b" style="overflow: auto; white-space: nowrap;">
+      <view wx:for="{{bookDetail.bookReviewList}}" class="b_r_20 b_fff c_666 t_c ft_36 d_in t_l b_b v_m p_r"
+        style="box-shadow: 1px 1px 4px #ccc;height: 250rpx; width: 400rpx;padding: 20rpx;margin-right:20rpx"
+        bindtap="toEvaluate">
+        <view style="white-space: nowrap;" class="split_6_4">
+          <view class="nowarp">
+            <image src="{{item.avatarUrl}}" mode="widthFix" class="v_m" style="width: 40rpx; height: 40rpx"></image>
+            <view class="d_in m_l_10 ft_26">{{item.nickName}}</view>
+          </view>
+          <view class="t_r">
+            <image src="../../images/icon/icon_star_active.png" wx:for="{{item.score}}" mode="widthFix"
+              style="width: 24rpx; height: 24rpx"></image>
+          </view>
+        </view>
+        <view class="p_10">{{item.content}}</view>
+        <view class="p_a t_r ft_26 p_10 b_b" style="width: 100%;bottom: 0;padding-right: 30rpx">{{item.createdTime}}
+        </view>
+      </view>
+      <view class="d_in v_m">
+        <view class="b_r_20 b_fff c_666 t_c ft_36 d_in"
+          style="box-shadow: 1px 1px 4px #ccc;height: 250rpx; width: 400rpx;display: flex; flex-direction: row; align-items: center;justify-content: center;"
+          bindtap="toEvaluate">
+          点击添加书评
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+
+  <view class="c_fff b_1a83ee t_c p_30 b_b m_20"
+    style="border-radius: 10rpx;position: fixed; bottom: 30rpx; width: 86%;" bindtap="toRead">开始阅读</view>
+</view>

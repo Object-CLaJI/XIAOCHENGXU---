@@ -1,0 +1,17 @@
+<view style="height: {{navTop + 49}}px">
+</view>
+<view style="height:44px;position:fixed; top: 0px;padding-top:{{navTop}}px;display:flex;align-items:center;width:100%;background:#fff;text-align:center;z-index: 99;padding-bottom: 5px">
+  <!-- <view style="width:80rpx;display:inline-block"><image mode="widthFix" style="width:40rpx" src="/images/icon/iconRight_333.png"></image></view> -->
+  <view style="width:180rpx;display:inline-block">
+    <view wx:if="{{shownav =='true'}}" style="border-radius: 100px;border:1px solid #eee;display:flex;justify-content:space-between;align-items:center;margin-left: 10px">
+      <view style="border-right: 1px solid #eee;width:calc(50% - 2px);text-align:center;padding:6px 0">
+        <image bindtap="navBack" mode="widthFix" style="width:40rpx;" src="/images/icon/iconRight_333.png"></image>
+      </view>
+      <view style="width:50%;text-align:center;padding:6px 0">
+        <image bindtap="backIndex" mode="widthFix" style="width:30rpx;" src="/images/newIcon/home_active.png"></image>
+      </view>
+    </view>
+  </view>
+  <view style="width:calc(100% - 361rpx);display:inline-block;">{{title}}</view>
+  <view style="width:180rpx;display:inline-block"></view>
+</view>

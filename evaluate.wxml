@@ -1,0 +1,12 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class="p_10 b_b">
+  <view class="p_20">书名: {{bookName}}</view>
+  <view class="p_20 d_in">
+    评分:
+    <star bind:changeVal="changeStar"></star>
+  </view>
+  <view class="p_20 b_b">
+    <textarea class="p_10 b_b" style="width: 100%;height: 300rpx; border: 1px solid #ccc" bindinput="inputValue"  data-bindname="content" placeholder="请输入您的评价内容"></textarea>
+  </view>
+  <view class="c_fff b_1a83ee t_c p_30 b_b m_20" style="border-radius: 10rpx" bindtap="toSubmit">提交</view>
+</view>

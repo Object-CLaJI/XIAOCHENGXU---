@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/loading/loading",
+    "pages/index/index",
+    "pages/reader/reader",
+    "pages/searchPage/searchPage",
+    "pages/evaluate/evaluate",
+    "pages/bookList/bookList",
+    "pages/bookDetail/bookDetail",
+    "pages/noticeList/noticeList",
+    "pages/bookReviewList/bookReviewList",
+    "pages/login/login"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "为了方便您更快的导航至地点"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "澳翔悦读",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

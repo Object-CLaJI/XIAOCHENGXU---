@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "star": "/components/stars/stars"
+  },
+  "navigationBarTitleText": "撰写书评"
+}

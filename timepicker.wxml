@@ -1,0 +1,25 @@
+<view bindtap="openSelect" class="split">
+  <view><text style="color: {{choosedValue ? '' : '#c6c6c6'}}">{{choosedValue ? choosedValue : placeholder}}</text></view>
+  <view>
+   <image style="width: 30rpx" mode="widthFix" src="../../images/icon/iconRight_666.png"></image>
+  </view>
+</view>
+
+<view>
+  <view wx:if="{{open}}" class="cover"></view>
+  <view style="top: {{open ? '50%' : '100%'}}" class="pickPlace">
+  <view bindtap="closeCom" style="display:inline-block;width:46%;padding:2%;text-align:left">取消</view>
+  <view bindtap="chooseCom" style="display:inline-block;width:46%;padding:2%;text-align:right">确定</view>
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 100%" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view  wx:key="index" wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view  wx:key="index" wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view  wx:key="index" wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>

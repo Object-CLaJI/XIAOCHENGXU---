@@ -1,0 +1,16 @@
+<!--components/selectList/select.wxml-->
+<view bindtap="openSelect" class="split">
+  <view><text style="color: {{choosedValue ? '' : '#c6c6c6'}}">{{choosedValue ? choosedValue : placeholder}}</text></view>
+  <view>
+    <image style="width: 30rpx" mode="widthFix" src="../../images/icon/iconRight_666.png"></image>
+  </view>
+</view>
+<view bindtap="close" wx:if="{{open}}" style="position:fixed;top:0;bottom:0;right:0;left:0;background-color:#333;opacity:0.5"></view>
+<view bindtap="close" style="transform: translateX({{open ? '12%' : '120%' }});border-radius: 10rpx 0 0 10rpx" class="pickedList">
+  <view  wx:key="index" data-index="{{index}}" catchtap="comfirnSelect" class="split {{index === nowIndex ? 'active' : ''}}" wx:for="{{pickedList}}">
+    <view>{{item.name}}</view>
+    <view wx:if="{{index === nowIndex}}" style="font-weight:bold;color:#3385FF">
+      <image style="width: 30rpx;margin-right: 10rpx;" mode="widthFix"src="../../images/icon/right_green.png"></image>
+    </view>
+  </view>
+</view>

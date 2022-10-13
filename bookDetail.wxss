@@ -1,0 +1,5 @@
+/* pages/bookDetail/bookDetail.wxss */
+.limitH{
+  max-height: 200rpx;
+  overflow-y: hidden;
+}

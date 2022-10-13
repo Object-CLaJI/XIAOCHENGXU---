@@ -1,0 +1,33 @@
+.split > view{
+  display: inline-block;
+  vertical-align: middle;
+}
+.split > view:nth-child(1){
+  width: 80%;
+}
+.split > view:nth-child(2){
+  width: 20%;
+  text-align: right;
+  color: #999;
+}
+.pickedList{
+  position: fixed;
+  left: 0;
+  transition: transform 0.5s;
+  top: 0;
+  transform: translateX(120%);
+  background-color: #fff;
+  width:90%;
+  bottom:0;
+  z-index: 10;
+  overflow: auto;
+}
+.pickedList > view {
+  margin: 20rpx;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.pickedList > view.active {
+  color: #2EC9C6;
+  font-size: 40rpx;
+}

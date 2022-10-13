@@ -1,0 +1,12 @@
+/* components/marquee.wxss */
+.marquee_container {
+  position: relative;  
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee_text {
+  position: relative;
+  white-space: nowrap;
+  top: 2px;
+}

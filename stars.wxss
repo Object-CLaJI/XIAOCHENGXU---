@@ -1,0 +1,8 @@
+/* components/stars/stars.wxss */
+.d_in {
+  display: inline-block;
+}
+
+.v_m {
+  vertical-align: middle;
+}

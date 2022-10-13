@@ -1,0 +1,49 @@
+.split > view{
+  display: inline-block;
+  vertical-align: middle;
+}
+.split > view:nth-child(1){
+  width: 80%;
+}
+.split > view:nth-child(2){
+  width: 20%;
+  text-align: right;
+  color: #999;
+}
+.pickedList{
+  position: fixed;
+  left: 0;
+  transition: left 0.5s;
+  top: 0;
+  background-color: #fff;
+  width:100%;
+  bottom:0;
+}
+.pickedList > view {
+  margin: 20rpx;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.pickedList > view.active {
+  color: #3385FF;
+  font-size: 40rpx;
+}
+.cover{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #333;
+  opacity: 0.5;
+}
+.pickPlace{
+  position: fixed;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+<!--pages/noticeList/noticeList.wxml-->
+<view>
+  <view wx:for="{{noticeList}}" wx:key="index" class="p_30 b_b m_30 ft_32" style="box-shadow: 1px 1px 4px #ccc;border-radius: 10rpx">
+    <view class="p_10" style="border-bottom: 1rpx solid #ccc">标题: {{item.title}}</view>
+    <view class="p_10">内容: {{item.content}}</view>
+    <view class="p_10" style="border-top: 1rpx solid #ccc">更新时间: {{item.createdTime}}</view>
+  </view>
+
+
+</view>

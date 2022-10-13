@@ -1,0 +1,5 @@
+<!-- <web-view src="http://192.168.2.128:5001?id={{bookId}}&bookName={{bookName}}&url={{url}}"></web-view> -->
+<web-view src="https://read.aoxiangyudu.com/ma/index.html?id={{bookId}}&bookName={{bookName}}&url={{url}}&columnId={{columnId}}"></web-view>
+<!-- <web-view src="http://192.168.2.128:5000/samples/steve-jobs/"></web-view> -->
+<!-- <web-view src="http://192.168.2.128:5000/samples/magazine/"></web-view> -->
+<!-- <web-view src="http://127.0.0.1:5000/index.html?id=1397760161689894914&bookName=%E5%9B%9B%E4%B9%A6%E4%BA%94%E7%BB%8F&url=https://gsax.oss-cn-shanghai.aliyuncs.com/read/1622086955889-55780f5f-3445-45bb.pdf&columnId=1412687367364935682"></web-view> -->

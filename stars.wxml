@@ -1,0 +1,8 @@
+<block wx:for="{{activeStar}}" wx:key="index">
+  <image catchtap='changeStar' id='{{index+1}}' data-in='use_sc2' class="d_in v_m" style="width: 40rpx; height: 40rpx"
+    src='./icon_star_active.png'></image>
+</block>
+<block wx:for="{{noActiveStar}}" wx:key="index">
+  <image catchtap='changeStar' id='{{index+1}}' data-in='use_sc' class="d_in v_m" style="width: 40rpx; height: 40rpx"
+    src='./icon_star.png'></image>
+</block>

@@ -1,0 +1,41 @@
+<!--pages/bookList/bookList.wxml-->
+<scroll-view style="width:100%;height: calc(100vh);overflow-y:auto" wx:if="{{showList && showList.length}}" scroll-y="true" bindscrolltolower="loadMore"
+  class='deviceScroll p_a box_borderBox'>
+  <view class="p_t_b_20 box_borderBox ft_32 t_c" wx:for="{{showList}}" wx:key="index" style="width: 96%; margin-left: 2%;border-bottom: 1rpx solid #efefef;" bindtap="toDetail" data-item="{{item}}">
+    <view class="split_3_7">
+      <view>
+        <image src="{{item.coverImgUrl}}" mode="widthFix" style="width: 90%"></image>
+      </view>
+      <view class="split_9_1 p_l_r_20 b_b">
+        <view class="ft_30">
+          <view class="t_l f_w ft_36">{{item.name}}</view>
+          <view class="split_4_6">
+            <view class="t_l">本书作者: </view>
+            <view class="t_l">{{item.author}}</view>
+          </view>
+          <view class="split_4_6">
+            <view class="t_l">出版日期: </view>
+            <view class="t_l">{{item.publishDate}}</view>
+          </view>
+          <view class="split_4_6">
+            <view class="t_l">出版社: </view>
+            <view class="t_l">{{item.press}}</view>
+          </view>
+          <view class="split_4_6">
+            <view class="t_l">ISBN: </view>
+            <view class="t_l">{{item.isbn}}</view>
+          </view>
+          <view class="split_4_6">
+            <view class="t_l">本书评分: </view>
+            <view class="t_l">{{item.score}}分</view>
+          </view>
+        </view>
+        <view>
+          <image src="../../images/icon/icon_arrow_right.png" mode="widthFix" style="width: 80%"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="ft_30 c_666 t_c m_t_20">好书, 值得与大家分享</view>
+</scroll-view>

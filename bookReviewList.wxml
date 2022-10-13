@@ -1,0 +1,18 @@
+<view wx:for="{{bookDetail.bookReviewList}}" class="b_r_20 b_fff c_666 t_c ft_36 d_in t_l b_b v_m p_r"
+  style="box-shadow: 1px 1px 4px #666;height: 250rpx; width: 90% ;padding: 20rpx;margin-left:5%;margin-top: 40rpx;padding-bottom: 200rpx;">
+  <view style="white-space: nowrap;" class="split_6_4">
+    <view class="nowarp">
+      <image src="{{item.avatarUrl}}" mode="widthFix" class="v_m" style="width: 80rpx; height: 80rpx"></image>
+      <view class="d_in m_l_10 ft_26 v_m">
+        <view>{{item.nickName}}</view>
+        <view>{{item.createdTime}}</view>
+      </view>
+    </view>
+    <view class="t_r">
+      <image src="../../images/icon/icon_star_active.png" wx:for="{{item.score}}" mode="widthFix"
+        style="width: 30rpx; height: 30rpx"></image>
+    </view>
+  </view>
+  <view class="p_10">{{item.content}}</view>
+</view>
+<view class="c_fff b_1a83ee t_c p_30 b_b" style="border-radius: 10rpx;position: fixed; bottom: 30rpx; width: 86%;margin-left:7%" bindtap="toEvaluate">撰写书评</view>
